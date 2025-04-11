@@ -78,13 +78,15 @@
     /* Tilted video box */
     .hero-video {
     position: absolute;
-    top: 180px;
-    right: 0px;
+    /* top: 180px; */
+    bottom: 60px;
+    right: 90px;
     width: 40%;
     box-shadow: 0 10px 20px rgba(0,0,0,0.6);
     z-index: 0;
     border-radius: 5px;
     overflow: hidden;
+    transition: transform 0.3s ease; 
     }
 
     .hero-video video {
@@ -93,13 +95,22 @@
     border-radius: 2px;
     }
 
+    .hero-video:hover{
+      transform: scale(1.3)
+    }
+
     /* CARD SECTION */
     .card-section {
-      
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
       justify-content: center;
       gap: 20px;
-      padding: 50px 10%;
+      padding: 50px 230px 10% 10%;
       background-color: #ffffff;
+      background-image: url("./assets/Syncopy_SV.jpg");
+      background-size: 50%;
+      background-repeat: no-repeat;
+      background-position: right;
     }
 
     .top-card {
@@ -157,11 +168,31 @@
         margin: 20px auto;
       }
 
-      .card-section {
-        
+      .card-section {      
         align-items: center;
         padding: 30px 5%;
       }
+    }
+
+    .ppt {
+  min-height: 400px;
+  background-color: #a0fcf7;
+  background-image: url("./assets/logo-enh.png");
+  background-size: 60%;
+  background-repeat: no-repeat;
+  background-position: left;
+  position: relative;
+}
+
+    .PersonInfo{
+      position: absolute;
+      width:30%;
+      right: 100px;
+    }
+
+    .footer{
+      background-color: #f9f9f9;
+      padding-top: 80px;
     }
   </style>
 </head>
@@ -209,7 +240,49 @@
       <h3>Smart Interior</h3>
       <p>Includes voice assistant, panoramic HUD, memory seats, and climate AI.</p>
     </div>
+    <div class="card">
+      <h3>Best Armed</h3>
+      <p>The car have the best arm of the world.</p>
+    </div>
+    <div class="card">
+      <h3>Great tyre</h3>
+      <p>The tyre can help you pass all kind of ground</p>
+    </div>
   </section>
 
+  <section class="ppt">
+    <div class="PersonInfo">
+    <label for name>Your name:</label>
+    <input type="text" name="name" placeholder="Enter your name">
+    <br>
+    <br>
+    <label for gender>Your Gender:</label>
+    <input type="radio" id="male" name="gender" value="male" checked>
+    <label for male>Male</label>
+    <input type="radio" id="female" name="gender" value="female" >
+    <label for female>Female</label>
+
+    <br>
+    <br>
+    <label for date>Your Date of Birth:</label>
+    <input type="date" id="date">
+
+    <br>
+    <br>
+    <label for email>Your Email:</label>
+    <input type="email" id="email" placeholder="Enter your email">
+    <br>
+    <br>
+    <button type="submit">Submit</button>
+  </div>
+  </section>
+
+  <br>
+  <section class="footer">
+    <footer>
+      If you want any details, welcome to contact us:
+      <a href="mercedesvisionavtr@hotmail.com">mercedesvisionavtr@hotmail.com</a>
+    </footer>
+  </section>
 </body>
 </html>
